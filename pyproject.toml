@@ -1,0 +1,9 @@
+[project]
+name = "speakup"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.14"
+dependencies = [
+    "myst-parser>=5.0.0",
+    "sphinx>=9.1.0",
+]

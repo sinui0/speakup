@@ -1,0 +1,25 @@
+project = "SpeakUp"
+copyright = "2026, SpeakUp Contributors"
+author = "SpeakUp Contributors"
+
+extensions = [
+    "myst_parser",
+    "sphinx.ext.mathjax",
+]
+
+myst_enable_extensions = [
+    "dollarmath",
+    "amsmath",
+    "deflist",
+    "colon_fence",
+]
+
+templates_path = ["_templates"]
+exclude_patterns = ["_build"]
+
+html_theme = "alabaster"
+html_static_path = ["_static"]
+html_theme_options = {
+    "sidebar_width": "260px",
+    "page_width": "940px",
+}
