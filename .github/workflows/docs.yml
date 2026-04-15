@@ -21,8 +21,13 @@ jobs:
 
       - uses: astral-sh/setup-uv@v6
 
+      - name: Install drawio
+        run: |
+          curl -sL https://github.com/jgraph/drawio-desktop/releases/download/v29.6.1/drawio-amd64-29.6.1.deb -o drawio.deb
+          sudo dpkg -i drawio.deb || sudo apt-get install -f -y
+
       - name: Build docs
-        run: uv run sphinx-build docs docs/_build/html
+        run: xvfb-run make -C docs html
 
       - uses: actions/upload-pages-artifact@v3
         with:
